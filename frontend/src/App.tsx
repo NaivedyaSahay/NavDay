@@ -246,24 +246,26 @@ function App() {
         /* Render main board view */
         <div className="space-y-6">
           {/* Motivational Quotes Banner */}
-          <div className="w-full max-w-5xl mx-auto p-4 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl shadow-md flex items-start gap-4 transition-all duration-300 relative overflow-hidden group">
-            <div className="p-2 rounded-lg bg-accent/10 text-accent shrink-0 mt-0.5">
-              <Sparkles size={18} className="animate-pulse" />
-            </div>
-            
-            <div className="flex-1 min-w-0 pr-16">
-              <p className="text-sm italic font-medium leading-relaxed text-[var(--text-primary)] mb-1.5">
-                "{quotes[quoteIdx].text}"
-              </p>
-              <p className="text-xs font-bold text-[var(--text-secondary)]">
-                — {quotes[quoteIdx].author} 
-                {quotes[quoteIdx].source && <span className="font-normal opacity-85"> ({quotes[quoteIdx].source})</span>}
-              </p>
+          <div className="w-full max-w-5xl mx-auto p-4 sm:p-5 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl shadow-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 relative overflow-hidden group">
+            <div className="flex items-start gap-4 flex-1 min-w-0">
+              <div className="p-2 rounded-lg bg-accent/10 text-accent shrink-0 mt-0.5">
+                <Sparkles size={18} className="animate-pulse" />
+              </div>
+              
+              <div className="flex-1 min-w-0">
+                <p className="text-sm italic font-medium leading-relaxed text-[var(--text-primary)] mb-1.5">
+                  "{quotes[quoteIdx].text}"
+                </p>
+                <p className="text-xs font-bold text-[var(--text-secondary)]">
+                  — {quotes[quoteIdx].author} 
+                  {quotes[quoteIdx].source && <span className="font-normal opacity-85"> ({quotes[quoteIdx].source})</span>}
+                </p>
+              </div>
             </div>
 
             <button 
               onClick={nextQuote}
-              className="absolute right-4 top-4 px-3 py-1.5 rounded-lg border border-[var(--border-color)] bg-[var(--bg-card)] text-xs font-semibold text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--hover-bg)] shadow-sm transition-all cursor-pointer"
+              className="w-full sm:w-auto shrink-0 px-3 py-2 rounded-lg border border-[var(--border-color)] bg-[var(--bg-card)] text-xs font-semibold text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--hover-bg)] shadow-sm transition-all cursor-pointer text-center"
             >
               Get Motivated
             </button>

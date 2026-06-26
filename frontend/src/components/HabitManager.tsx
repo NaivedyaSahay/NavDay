@@ -38,7 +38,7 @@ const HabitManager: React.FC<HabitManagerProps> = ({ onAddHabit }) => {
           className="w-full bg-[var(--bg-app)] border border-[var(--border-color)] rounded-lg px-4 py-3 text-[var(--text-primary)] placeholder-[var(--text-muted)] focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors"
         />
       </div>
-      <div className="flex items-center gap-3 bg-[var(--bg-app)] px-4 py-2 rounded-lg border border-[var(--border-color)] justify-center">
+      <div className="flex flex-wrap items-center gap-2 sm:gap-3 bg-[var(--bg-app)] px-2 sm:px-4 py-2 rounded-lg border border-[var(--border-color)] justify-center">
         {colors.map(color => (
           <button
             key={color}
