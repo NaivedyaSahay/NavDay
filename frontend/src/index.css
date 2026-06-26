@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-accent: var(--accent-color);
+  --color-accent-hover: var(--accent-hover);
+}
+
+:root {
+  --bg-app: #f5f6f8;
+  --bg-card: #ffffff;
+  --border-color: #e5e7eb;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  --cell-empty: #f3f4f6;
+  --cell-weekend: #f8f9fa;
+  --cell-border: #ffffff;
+  --hover-bg: #f9fafb;
+  
+  /* Accent: Emerald Green */
+  --accent-color: #059669;
+  --accent-hover: #10b981;
+}
+
+:root.dark {
+  /* Neon Cyan & Mysterious Forest Teal Theme matching the image colors */
+  --bg-app: #020b0e;
+  --bg-card: #05151b;
+  --border-color: #0c2b35;
+  --text-primary: #e1f6fc;
+  --text-secondary: #6ba2b0;
+  --text-muted: #325d6a;
+  --cell-empty: #071e25;
+  --cell-weekend: #031317;
+  --cell-border: #05151b;
+  --hover-bg: #0d323e;
+
+  /* Accent: Neon Cyan */
+  --accent-color: #00e5ff;
+  --accent-hover: #00f3ff;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  transition: background-color 0.2s, color 0.2s;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Scrollbar behaviors */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
