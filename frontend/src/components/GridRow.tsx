@@ -83,7 +83,7 @@ const GridRow: React.FC<GridRowProps> = ({
   return (
     <div className="flex items-stretch gap-1 group">
       {/* Left Sidebar Habit Title (Clickable for detail view) */}
-      <div className="w-44 shrink-0 flex items-center justify-between px-3 py-2 bg-[var(--bg-card)] border-r border-[var(--border-color)] text-sm font-semibold text-[var(--text-primary)]">
+      <div className="w-44 shrink-0 flex items-center justify-between px-3 py-2 bg-[var(--bg-card)] border-r border-[var(--border-color)] text-sm font-semibold text-[var(--text-primary)] sticky left-0 z-10">
         <button 
           onClick={onSelect}
           className="flex items-center gap-2 overflow-hidden hover:opacity-85 text-left cursor-pointer flex-1"
@@ -131,7 +131,7 @@ const GridRow: React.FC<GridRowProps> = ({
       </div>
 
       {/* Right Stats Columns */}
-      <div className="w-48 shrink-0 grid grid-cols-3 gap-1 items-center text-center text-xs text-[var(--text-secondary)] font-semibold border-l border-[var(--border-color)] pl-4">
+      <div className="w-48 shrink-0 grid grid-cols-3 gap-1 items-center text-center text-xs text-[var(--text-secondary)] font-semibold border-l border-[var(--border-color)] pl-4 bg-[var(--bg-card)] sticky right-0 z-10">
         <span>{habit.currentStreak}</span>
         <span>{habit.longestStreak}</span>
         <span>{totalCount}</span>

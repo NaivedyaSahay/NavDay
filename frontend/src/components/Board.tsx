@@ -51,12 +51,12 @@ const Board: React.FC<BoardProps> = ({
 
   return (
     <div className="w-full max-w-5xl mx-auto p-4 md:p-6 mt-6 bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl shadow-2xl transition-all duration-300 overflow-hidden">
-      <div className="w-full overflow-x-auto hide-scrollbar">
+      <div className="w-full overflow-x-auto custom-scrollbar">
         <div className="w-max min-w-full pr-4 pb-2">
           {/* Board Header Grid */}
           <div className="flex items-stretch gap-1 mb-3">
             {/* Left Sidebar Header */}
-            <div className="w-44 shrink-0 flex flex-col justify-between py-2 pr-2 border-r border-[var(--border-color)]">
+            <div className="w-44 shrink-0 flex flex-col justify-between py-2 pr-2 border-r border-[var(--border-color)] sticky left-0 bg-[var(--bg-card)] z-10">
               <button className="text-accent hover:bg-accent/10 p-1.5 rounded-lg self-start transition-all cursor-pointer">
                 <Settings size={18} />
               </button>
@@ -120,7 +120,7 @@ const Board: React.FC<BoardProps> = ({
             </div>
 
             {/* Right Stats Header */}
-            <div className="w-48 shrink-0 flex flex-col justify-between py-2 pl-4 border-l border-[var(--border-color)]">
+            <div className="w-48 shrink-0 flex flex-col justify-between py-2 pl-4 border-l border-[var(--border-color)] sticky right-0 bg-[var(--bg-card)] z-10">
               {/* Dark Mode Switcher */}
               <div className="flex items-center justify-end gap-1.5 self-end">
                 {theme === 'dark' ? <Moon size={14} className="text-yellow-400" /> : <Sun size={14} className="text-amber-500" />}
@@ -166,7 +166,7 @@ const Board: React.FC<BoardProps> = ({
           {/* Bottom Summary counts & Zoom slider */}
           <div className="flex items-center gap-1 mt-3 pt-3 border-t border-[var(--border-color)]">
             {/* Left Spacer */}
-            <div className="w-44 shrink-0 text-[10px] font-semibold text-[var(--text-secondary)] pr-2 border-r border-[var(--border-color)]">
+            <div className="w-44 shrink-0 text-[10px] font-semibold text-[var(--text-secondary)] pr-2 border-r border-[var(--border-color)] sticky left-0 bg-[var(--bg-card)] z-10">
               &nbsp;
             </div>
 
@@ -191,7 +191,7 @@ const Board: React.FC<BoardProps> = ({
             </div>
 
             {/* Right Zoom Slider */}
-            <div className="w-48 shrink-0 pl-4 border-l border-[var(--border-color)] flex items-center justify-between gap-2">
+            <div className="w-48 shrink-0 pl-4 border-l border-[var(--border-color)] flex items-center justify-between gap-2 sticky right-0 bg-[var(--bg-card)] z-10">
               <input 
                 type="range"
                 min={32}

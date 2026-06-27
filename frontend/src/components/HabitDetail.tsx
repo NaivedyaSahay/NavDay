@@ -257,7 +257,7 @@ const HabitDetail: React.FC<HabitDetailProps> = ({ habit, onBack, onToggleDay })
         </div>
 
         {/* Heatmap Graph */}
-        <div className="overflow-x-auto hide-scrollbar pb-4 border-b border-[var(--border-color)] mb-6">
+        <div className="overflow-x-auto custom-scrollbar pb-4 border-b border-[var(--border-color)] mb-6">
           <div className="min-w-[800px] flex flex-col">
             {/* Months Header Line */}
             <div className="flex pl-8 mb-2">
