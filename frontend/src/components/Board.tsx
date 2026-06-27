@@ -164,7 +164,7 @@ const Board: React.FC<BoardProps> = ({
           </div>
 
           {/* Bottom Summary counts & Zoom slider */}
-          <div className="flex items-center gap-1 mt-3 pt-3 border-t border-[var(--border-color)]">
+          <div className="flex gap-1 mt-3 pt-3 border-t border-[var(--border-color)]">
             {/* Left Spacer */}
             <div className="w-44 shrink-0 text-[10px] font-semibold text-[var(--text-secondary)] pr-2 border-r border-[var(--border-color)] sticky left-0 bg-[var(--bg-card)] z-10">
               &nbsp;
